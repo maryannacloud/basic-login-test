@@ -10,13 +10,10 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//span[@id='nav-link-accountList-nav-line-1']")
     WebElement signInLink;
 
-    public void hoverOverSignInLink(){
+    public void hoverOverSignInLinkAndClickSignIn(){
         hoverOver(signInLink);
         signInLink = wait.until(ExpectedConditions
                 .visibilityOfElementLocated(By.xpath("//span[text()='Sign in']")));
-        signInLink.click();
+        clickElement(signInLink);
     }
-
-
-
 }

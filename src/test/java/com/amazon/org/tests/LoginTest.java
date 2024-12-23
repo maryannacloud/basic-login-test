@@ -6,6 +6,9 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void verifyLogin() {
-        homePage.hoverOverSignInLink();
+        homePage.hoverOverSignInLinkAndClickSignIn();
+        loginPage.enterEmailAndClickContinue();
+        loginPage.dismissBrowserAlert();
+        loginPage.enterPasswordAndClickSignIn();
     }
 }
